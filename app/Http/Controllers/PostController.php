@@ -40,10 +40,10 @@ class postController extends Controller
 
     public function postAdminCreate(Store $session, Request $request){
 
-        $this->$validate($request, [
+        Validator::make($request->all(), [
             'title' => 'required|min:5',
             'content' => 'required|min:10'
-        ]);
+        ])->validate();
 
         $post = new Post();
         $post->addPost($session, $request->input('title'), $request->input('content'));
@@ -52,10 +52,10 @@ class postController extends Controller
 
     public function postAdminUpdate(Store $session, Request $request){
 
-        $this->$validate($request, [
+        Validator::make($request->all(), [
             'title' => 'required|min:5',
             'content' => 'required|min:10'
-        ]);
+        ])->validate();
 
         $post = new Post();
         $post->editPost($session, $request->input('id'), $request->input('title'), $request->input('content'));

@@ -42,7 +42,7 @@ Route::group(['prefix' => 'admin'], function() {
 
     Route::get('edit/{id}', [
        'uses' => 'PostController@getAdminEdit',
-        'uses' => 'admin.edit'
+        'as' => 'admin.edit'
     ]);
 
     Route::post('edit', [
