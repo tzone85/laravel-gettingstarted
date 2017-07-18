@@ -1,0 +1,11 @@
+.quotes{
+    /*font: 400 72px "Ariozna", Helvitica, sans-serif;*/
+    font-family: 'Arizonia', cursive;
+    color: #F4645F;
+    text-align: center;
+    font-size: 72px;
+}
+
+.post-title {
+    color: #F4645F;
+}
